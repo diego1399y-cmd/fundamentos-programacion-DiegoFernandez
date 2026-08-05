@@ -1,32 +1,6 @@
 {
   "cells": [
     {
-      "cell_type": "code",
-      "execution_count": 1,
-      "id": "6c3cb4f6",
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "6c3cb4f6",
-        "outputId": "8d488315-b91b-4079-c667-a8f09f7b958a"
-      },
-      "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stdout",
-          "text": [
-            "Tarea lista para resolver. Ejecuta cada bloque de tests tras implementar.\n"
-          ]
-        }
-      ],
-      "source": [
-        "# Identifícate (esto ayuda si entregas el notebook).\n",
-        "NOMBRE = \"Diego Andres Fernandez Gonzalez\"   # ✏️ escribe tu nombre completo\n",
-        "print(\"Tarea lista para resolver. Ejecuta cada bloque de tests tras implementar.\")"
-      ]
-    },
-    {
       "cell_type": "markdown",
       "id": "35b01df6",
       "metadata": {
@@ -54,6 +28,32 @@
       ]
     },
     {
+      "cell_type": "code",
+      "execution_count": 1,
+      "id": "6c3cb4f6",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6c3cb4f6",
+        "outputId": "8d488315-b91b-4079-c667-a8f09f7b958a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Tarea lista para resolver. Ejecuta cada bloque de tests tras implementar.\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Identifícate (esto ayuda si entregas el notebook).\n",
+        "NOMBRE = \"Diego Andres Fernandez Gonzalez\"   # ✏️ escribe tu nombre completo\n",
+        "print(\"Tarea lista para resolver. Ejecuta cada bloque de tests tras implementar.\")"
+      ]
+    },
+    {
       "cell_type": "markdown",
       "id": "a1e0686b",
       "metadata": {
@@ -74,7 +74,7 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 2,
+      "execution_count": 6,
       "id": "9aae719c",
       "metadata": {
         "id": "9aae719c"
@@ -87,20 +87,32 @@
         "        # Check for leap year\n",
         "        es_bisiesto = (anio % 4 == 0 and anio % 100 != 0) or (anio % 400 == 0)\n",
         "        if es_bisiesto:\n",
-        "            total_dias += 366\n",
+        "            total_dias = total_dias + 366\n",
         "        else:\n",
-        "            total_dias += 365\n",
+        "            total_dias = total_dias + 365\n",
         "    return total_dias"
       ]
     },
     {
       "cell_type": "code",
-      "execution_count": null,
+      "execution_count": 7,
       "id": "9a09d406",
       "metadata": {
-        "id": "9a09d406"
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9a09d406",
+        "outputId": "a45f2af0-be3e-4614-e934-f3e981fa9ee6"
       },
-      "outputs": [],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "✅ Ejercicio 1: tests visibles superados.\n"
+          ]
+        }
+      ],
       "source": [
         "# === Tests visibles · Ejercicio 1 ===\n",
         "assert dias_entre_anios(2020, 2023) == 1096\n",
@@ -110,12 +122,24 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
+      "execution_count": 8,
       "id": "a7c69750",
       "metadata": {
-        "id": "a7c69750"
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "a7c69750",
+        "outputId": "619d5f0e-7bee-41b1-a254-d305f71f22a5"
       },
-      "outputs": [],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "✅ Ejercicio 1: tests adicionales superados.\n"
+          ]
+        }
+      ],
       "source": [
         "# === Tests adicionales (ocultos) · Ejercicio 1 ===\n",
         "assert dias_entre_anios(2000, 2001) == 366\n",
@@ -144,7 +168,7 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 3,
+      "execution_count": 9,
       "id": "2f5b5f36",
       "metadata": {
         "id": "2f5b5f36"
@@ -152,7 +176,6 @@
       "outputs": [],
       "source": [
         "def tipo_triangulo(a, b, c):\n",
-        "    # Validate if sides can form a triangle\n",
         "    if not (a + b > c and a + c > b and b + c > a):\n",
         "        return 'invalido'\n",
         "\n",
@@ -166,12 +189,24 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
+      "execution_count": 10,
       "id": "eee584f8",
       "metadata": {
-        "id": "eee584f8"
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eee584f8",
+        "outputId": "d98b4a2c-9a3f-42fb-fff0-7d06e483849f"
       },
-      "outputs": [],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "✅ Ejercicio 2: tests visibles superados.\n"
+          ]
+        }
+      ],
       "source": [
         "# === Tests visibles · Ejercicio 2 ===\n",
         "assert tipo_triangulo(5, 5, 5) == 'equilatero'\n",
@@ -183,12 +218,24 @@
     },
     {
       "cell_type": "code",
-      "execution_count": null,
+      "execution_count": 11,
       "id": "ce2b13d3",
       "metadata": {
-        "id": "ce2b13d3"
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ce2b13d3",
+        "outputId": "ee61f378-5f93-4887-b9ba-1af536d968d2"
       },
-      "outputs": [],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "✅ Ejercicio 2: tests adicionales superados.\n"
+          ]
+        }
+      ],
       "source": [
         "# === Tests adicionales (ocultos) · Ejercicio 2 ===\n",
         "assert tipo_triangulo(0, 0, 0) == 'invalido'\n",
@@ -220,7 +267,7 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 4,
+      "execution_count": 12,
       "id": "de13ea7e",
       "metadata": {
         "id": "de13ea7e"
@@ -432,7 +479,7 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 7,
+      "execution_count": 13,
       "id": "d634c922",
       "metadata": {
         "id": "d634c922"
@@ -498,7 +545,7 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 8,
+      "execution_count": 14,
       "id": "150c3e02",
       "metadata": {
         "id": "150c3e02"
@@ -568,7 +615,7 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 9,
+      "execution_count": 15,
       "id": "4c46fcfc",
       "metadata": {
         "id": "4c46fcfc"
